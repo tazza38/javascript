@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">
+    <script type="text/javascript">
+    console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
+
 var text1 = "안냥하세여.";
 var text2 = '안냥하세여.';
 
@@ -18,7 +28,9 @@ console.log(text4);
 console.log(text5);
 console.log(text6);
 
-</script>
+     }
+    }
+    </script>
 </head>
 <body>
 <div>

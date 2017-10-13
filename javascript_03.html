@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">
+    <script type="text/javascript">
+    console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
+
 var language="javascript";
 
 console.log(language[0]);
@@ -15,7 +25,10 @@ language[2] = 'c';
 language[3] = 'd';
 
 console.log(language);
-</script>
+
+     }
+    }
+    </script>
 </head>
 <body>
 <div>
